@@ -1,39 +1,38 @@
 
 // Creating a parent Class
 class Animal {
-    constructor(name,image,numberOfLegs){
-        this.name=name;
-        this.image=image;
-        this.numberOfLegs;
+    constructor(name, image, numberOfLegs) {
+        this.name = name;
+        this.image = image;
+        this.numberOfLegs = numberOfLegs;
     }
 }
 
 // Exporting the class so we can use it for another location
-export default Animal;
 
 
 // Creating a child Class
 class Dog extends Animal {
-    constructor(name,image,age,numberOfLegs){
-        super(name,image,numberOfLegs);
-        this.age=age;
+    constructor(name, image, age, numberOfLegs) {
+        super(name, image, numberOfLegs);
+        this.age = age;
     }
-    create(){
+    create() {
         const name = document.createElement("p");
         const age = document.createElement("p");
         const image = document.createElement("div");
         const imageSource = document.createElement("img");
-        const animalCard =document.createElement("div");
+        const animalCard = document.createElement("div");
         const cardInfo = document.createElement("div");
-        name.innerHTML="Name: "+this.name;
-        name.className= "animalName";
-        age.innerHTML="Age: "+this.age;
-        age.className="animalAge";
-        image.innerHTML=this.image;
-        image.className="animalImage";
-        imageSource.className="imageSource";
-        cardInfo.className="cardInfo";
-        animalCard.className="animalCard";
+        name.innerHTML = "Name: " + this.name;
+        name.className = "animalName";
+        age.innerHTML = "Age: " + this.age;
+        age.className = "animalAge";
+        image.innerHTML = this.image;
+        image.className = "animalImage";
+        imageSource.className = "imageSource";
+        cardInfo.className = "cardInfo";
+        animalCard.className = "animalCard";
         image.appendChild(imageSource);
         cardInfo.appendChild(name);
         cardInfo.appendChild(age);
@@ -42,8 +41,6 @@ class Dog extends Animal {
         return animalCard;
     }
 }
-
-export default Dog;
 
 // const DogList =[
 //     {dog1: new Dog("Blackhead","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",3,4)},
@@ -53,26 +50,29 @@ export default Dog;
 
 // Creating a child Class
 class Duck extends Animal {
-    constructor(name,image,age,numberOfLegs){
-        super(name, image,numberOfLegs);
-        this.age=age;
+    constructor(name, image, age, numberOfLegs) {
+        super(name, image, numberOfLegs);
+        this.age = age;
     }
-    create(){
+    create() {
+        //Creating Elements
         const name = document.createElement("p");
         const age = document.createElement("p");
         const image = document.createElement("div");
         const imageSource = document.createElement("img");
-        const animalCard =document.createElement("div");
+        const animalCard = document.createElement("div");
         const cardInfo = document.createElement("div");
-        name.innerHTML="Name: "+this.name;
-        name.className= "animalName";
-        age.innerHTML="Age: "+this.age;
-        age.className="animalAge";
-        image.innerHTML=this.image;
-        image.className="animalImage";
-        imageSource.className="imageSource";
-        cardInfo.className="cardInfo";
-        animalCard.className="animalCard";
+        //Adding ClassName and Paramaters
+        name.innerHTML = "Name: " + this.name;
+        name.className = "animalName";
+        age.innerHTML = "Age: " + this.age;
+        age.className = "animalAge";
+        image.innerHTML = this.image;
+        image.className = "animalImage";
+        imageSource.className = "imageSource";
+        cardInfo.className = "cardInfo";
+        animalCard.className = "animalCard";
+        //Appending Child
         image.appendChild(imageSource);
         cardInfo.appendChild(name);
         cardInfo.appendChild(age);
@@ -82,7 +82,6 @@ class Duck extends Animal {
     }
 }
 
-export default Duck;
 
 // const DuckList=[
 //     {duck1: new Duck ("Duffy","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/how-to-keep-ducks-call-ducks-1615457181.jpg?resize=640:*",2,2)},
@@ -90,19 +89,20 @@ export default Duck;
 //     {duck3: new Duck ("Murfuy","https://images.unsplash.com/photo-1597840637868-417c13c7e962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",2,2)},
 // ],
 
-import "../../.sass-cache";
-const animalCardsContainer= document.querySelector(".animalCards-container");
+import "../../"
 
-const Dog1 = new Dog("Karabas","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",3,4);
+const animalCardsContainer = document.querySelector(".animalCards-container");
+//Creating Dog list
+const Dog1 = new Dog("Karabas", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 3, 4);
+const Dog2 = new Dog("Comar", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 4, 4);
+const Dog3 = new Dog("Arya", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 1, 4);
 animalCardsContainer.appendChild(Dog1.create());
-const Dog2 = new Dog("Comar","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",4,4);
 animalCardsContainer.appendChild(Dog2.create());
-const Dog3 = new Dog("Arya","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",1,4);
 animalCardsContainer.appendChild(Dog3.create());
-
-const Duck1 = new Dog("Duffy","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",1,2);
+//Creating Duck list
+const Duck1 = new Duck("Duffy", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 1, 2);
+const Duck2 = new Duck("Donald", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 2, 2);
+const Duck3 = new Duck("Trump", "https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445", 4, 2);
 animalCardsContainer.appendChild(Duck1.create());
-const Duck2 = new Dog("Donald","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",2,2);
 animalCardsContainer.appendChild(Duck2.create());
-const Duck3 = new Dog("Trump","https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445",4,2);
 animalCardsContainer.appendChild(Duck3.create());

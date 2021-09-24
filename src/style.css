@@ -1,9 +1,6 @@
-$background-color : rgb(255, 182, 45) ;
-$line-color: rgb(107, 42, 42);
-$font-color: white;
-$shadow-color:rgba(0,0,0,0.9);
 
-// Entire Screen
+
+/* // Entire Screen */
 body {
     background-color: grey;
     font-size: 12px;
@@ -12,17 +9,18 @@ body {
     box-sizing: border-box;
 }
 
-// Header Area
+/* // Header Area */
 header{
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid $line-color;
-    .title{
-        color: $line-color;
-    }
+    border-bottom: 3px solid red;
 }
+.title{
+        color: red;
+    }
 
-//Middle Area
+
+/* //Middle Area */
 .animalCardsArea-wrap{
     display: flex;
     justify-content: center;
@@ -41,58 +39,57 @@ header{
     width: 100%;
     text-align: center;
     border: 1px solid black;
-    box-shadow: 5px 5px 3px $line-color;
+    box-shadow: 5px 5px 3px red;
     transform: translateY(12px);
     transition: 0.5s;
-    &:hover{
-        background-color: rgba(176, 170, 192, 0.5);
-        transform: translateY(0px);
-        box-shadow: 10px 20px 3px $line-color;   
-    }  
+    
 }
 .animalImage{
-    width: 100%;  
-    .imageSource{
+    width: 100%;  }
+
+.imageSource{
         width: 100%;
         padding: 10px;
     }
-}
+
 
 .cardInfo{
     text-align: center;
     margin-top: 5px;
     border-top: 1px solid black;
     position: relative;
-   .animalName{
+}
+.animalName{
       font-size: 40px;
    }
-   .animalAge{
+.animalAge{
        position: absolute;
        top:-5px;
        right: 5px;
        font-size: 80px;
    }
-}
 
 
 
 
 
-// Footer Area
+
+/* // Footer Area */
 .footer-wrap{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 3px solid $line-color;
+    border-top: 3px solid red;
+}
 
-    .footer-container{
+.footer-container{
         flex-direction: row;
         display: flex;
     }
     p{
         font-size: 1rem;
         align-items: baseline;
-        color: $line-color;
+        color: red;
         margin: 0px;
     }
     img {
@@ -101,4 +98,4 @@ header{
         margin-left: 3px;
         margin-top: 2px;
     }
-}
+
