@@ -1,0 +1,58 @@
+body {
+  background-color: grey;
+  font-size: 12px; }
+
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #6b2a2a; }
+  header .title {
+    color: #6b2a2a; }
+
+.animalCardsArea-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  flex-shrink: 1000px;
+  flex-grow: 1000px;
+  flex-basis: 1000px; }
+
+.animalCards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 200px; }
+
+.animalCard {
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
+  transform: translateY(12px);
+  transition: 0.5s; }
+  .animalCard:hover {
+    background-color: rgba(176, 170, 192, 0.5);
+    transform: translateY(0px);
+    box-shadow: 10px 20px 3px rgba(0, 0, 0, 0.9); }
+
+.animalImage {
+  width: 100%; }
+  .animalImage .imageSource {
+    width: 100%;
+    padding: 10px; }
+
+.cardInfo {
+  text-align: center;
+  margin-top: 5px;
+  border-top: 1px solid black;
+  position: relative; }
+  .cardInfo .animalName {
+    font-size: 40px; }
+  .cardInfo .animalAge {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 80px; }
+
+/*# sourceMappingURL=style.css.map */
